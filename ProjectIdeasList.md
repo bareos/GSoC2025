@@ -1,7 +1,7 @@
-# Bareos Google Summer of Code 2024 Project Ideas List
+# Bareos Google Summer of Code 2025 Project Ideas List
 
 We are open for GSoC contributors to propose their own original project ideas.
-Please use [Discussions/Ideas](https://github.com/bareos/GSoC2024/discussions/categories/ideas) to propose and discuss your idea.
+Please use [Discussions/Ideas](https://github.com/bareos/GSoC2025/discussions/categories/ideas) to propose and discuss your idea.
 
 ## Standardize Debug Message Levels
 
