@@ -44,26 +44,6 @@ C/C++, Python, PHP, Javascript, HTML, CSS
 
 **Difficulty rating**: hard
 
-## Enable using virtualenv for Python plugins
-
-Currently Python plugins require to fulfill dependencies by either installing operating system packaged python modules or by using pip as root, when the required versions are not available as packages.
-The first task is to research if it is possible at all to use virtualenv with Bareos Python plugins.
-This requires to understand the [Bareos Python Plugin API](https://docs.bareos.org/DeveloperGuide/PythonPluginAPI.html).
-Depending on the outcome of the research, the second task is to either implement and documentent how to use virtualenv with plugins, or work on a proposal how to change the Bareos Puthon plugin architecture to allow using virtualenv.
-Ideally it should be possible to use a virtualenv management like pipenv.
-
-**Expected outcomes**
-* It should be possible to use virtualenv for Bareos Python plugins
-
-**Skills required/preferred**:
-C/C++, Python
-
-**Possible mentors**: arogge, pstorz
-
-**Expected size of project**: ~175 hours (medium)
-
-**Difficulty rating**: hard
-
 ## Using Pylint to increase the Python code quality
 
 As Bareos developers we are interested to deliver the best code as possible.
@@ -114,8 +94,8 @@ Python
 
 ## Add support scripts to allow backups to object-based storages
 
-The currently existing droplet backend is far from optimal. Its upcoming
-replacement will work with scripts to interface with the storage service.
+The currently existing droplet backend is far from optimal. Its
+replacement works with scripts to interface with the storage service.
 While our first priority is to support Amazon S3 compatible storages, having
 more scripts to support different storage backends would provide significant
 value to our users.
@@ -140,3 +120,22 @@ Python and/or Bash, basic understanding of object-based storages
 **Expected size of project**: ~175 hours (medium)
 
 **Difficulty rating**: easy
+
+## Create a new Bareos Plugin to allow Backup of KVM/qemu virtual machines
+
+Recent versions of KVM/qemu are able to efficiently backup running virtual machines
+by using libvirt's implementation of incremental backups in the qemu driver which
+uses qemu's block-dirty-bitmaps under the hood to track the guest visible disk state
+changes corresponding to the points in time described by a libvirt checkpoint.
+
+**Expected outcomes**
+* A new Bareos Python Plugin using libvirt to backup KVM/qemu virtual machines
+
+**Skills required/preferred**:
+Python
+
+**Possible mentors**: arogge, pstorz
+
+**Expected size of project**: ~350 hours (large)
+
+**Difficulty rating**: hard
